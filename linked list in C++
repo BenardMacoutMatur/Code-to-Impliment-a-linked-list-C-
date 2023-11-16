@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+class node{
+public:
+    int x;
+    node* next;
+};
+
+void print_list(node* y){//we are going to pass to it the head element only.
+    while(y != NULL)
+    {
+        cout<< y->x;
+        y=y->next;
+    }
+
+}
+int main()
+{
+   node* head = new node();
+   node* second = new node();
+   node* third = new node();
+   node* fourth = new node();
+   node* fifth = new node();
+
+   head->x=3;
+   head-> next=second;
+   second->x=4;
+   second-> next=third;
+   third->x=5;
+   third->next=fourth;
+   fourth->x=6;
+   fourth->next=fifth;
+   fifth->x=7;
+   fifth->next=NULL;
+
+   print_list(head);
+}
